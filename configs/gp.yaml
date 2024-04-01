@@ -1,0 +1,33 @@
+# Copyright (c) 2024-present, Royal Bank of Canada.
+# Copyright (c) 2022, Tung Nguyen
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+#####################################################################################
+# Code is based on the TNP (https://arxiv.org/abs/2201.12740) implementation
+# from https://github.com/tung-nd/TNP-pytorch by Tung Nguyen 
+####################################################################################
+
+dim_x: 1
+dim_y: 1
+d_model: 64
+emb_depth: 4
+dim_feedforward: 128
+nhead: 4
+dropout: 0.0
+num_layers: 6
+norm_first: True
+encoder_type: 'quadratic'
+decoder_type: 'tca'
+bptt: False
+branch_factor: 2 
+ca_loss_weight: 1.0
+entropy_bonus_weight: 0.01
+rl_loss_weight: 1.0
+num_aggregation_layers: 1
+loss: 'nll'
+predictor_type: 'uncertainty_regression'
+is_metalearning: True
+is_sequential_data: False
+aggregator_type: 'transformer'
