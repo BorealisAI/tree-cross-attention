@@ -114,7 +114,7 @@ class TreeMemory(Memory):
         # The attention model and policy
         self.query_model = AttNorm(
             d_model,
-            Attention(d_model, nhead=nhead, dim_head=d_model // nhead, dropout=dropout),
+            Attention(d_model, nhead=nhead, dim_head=d_model // nhead, dropout=0.), # Set the dropout of the policy to 0
         )
         self.query_ff = Norm(
             d_model,
